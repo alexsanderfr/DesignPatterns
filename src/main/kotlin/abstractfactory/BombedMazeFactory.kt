@@ -11,8 +11,8 @@ abstract class BombedMazeFactory : MazeFactory() {
     override fun makeRoom(number: Int): Room {
         return RoomWithABomb(number)
     }
+
+    class BombedWall : Wall()
+
+    class RoomWithABomb(number: Int) : Room(number)
 }
-
-class BombedWall : Wall()
-
-class RoomWithABomb(number: Int) : Room(number)

@@ -2,7 +2,9 @@ package abstractfactory
 
 import structure.*
 
-class AbstractMazeGame {
+class AbstractFactoryMazeGame {
+
+    // MazeFactory can be replaced with BombedMazeFactory or EnchantedMazeFactory
     fun createMaze(mazeFactory: MazeFactory): Maze {
         val maze: Maze = mazeFactory.makeMaze()
         val room1: Room = mazeFactory.makeRoom(1)

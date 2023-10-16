@@ -15,9 +15,10 @@ abstract class EnchantedMazeFactory : MazeFactory() {
     private fun castSpell(): Spell {
         return Spell()
     }
+
+    class Spell
+    class EnchantedRoom(number: Int, spell: Spell) : Room(number)
+
+    class DoorNeedingSpell(room1: Room, room2: Room) : Door(room1, room2)
 }
 
-class Spell
-class EnchantedRoom(number: Int, spell: Spell) : Room(number)
-
-class DoorNeedingSpell(room1: Room, room2: Room) : Door(room1, room2)
