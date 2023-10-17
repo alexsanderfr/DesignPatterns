@@ -1,6 +1,4 @@
-package builder
-
-import structure.Maze
+package creational.builder
 
 abstract class CountingMazeBuilder: MazeBuilder() {
     private var _rooms = 0

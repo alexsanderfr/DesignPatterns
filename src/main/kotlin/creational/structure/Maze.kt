@@ -1,4 +1,4 @@
-package structure
+package creational.structure
 
 class Maze(private val rooms: MutableList<Room> = mutableListOf()) {
     fun addRoom(room: Room) {

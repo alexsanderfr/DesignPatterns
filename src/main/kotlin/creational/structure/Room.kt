@@ -1,4 +1,4 @@
-package structure
+package creational.structure
 
 open class Room(val number: Int, val sides: HashMap<Direction, MapSite> = hashMapOf()) : MapSite() {
     fun getSide(direction: Direction): MapSite {

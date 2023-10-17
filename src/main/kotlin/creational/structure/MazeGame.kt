@@ -1,4 +1,4 @@
-package structure
+package creational.structure
 
 class MazeGame {
     fun createMaze(): Maze {

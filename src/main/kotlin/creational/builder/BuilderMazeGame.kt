@@ -1,6 +1,6 @@
-package builder
+package creational.builder
 
-import structure.Maze
+import creational.structure.Maze
 
 class BuilderMazeGame {
     fun createMaze(builder: MazeBuilder): Maze {

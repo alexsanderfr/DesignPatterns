@@ -1,6 +1,6 @@
-package builder
+package creational.builder
 
-import structure.Maze
+import creational.structure.Maze
 
 abstract class MazeBuilder {
     abstract fun buildMaze()

@@ -1,6 +1,6 @@
-package builder
+package creational.builder
 
-import structure.*
+import creational.structure.*
 
 class StandardMazeBuilder : MazeBuilder() {
     var _currentMaze: Maze? = null
