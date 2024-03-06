@@ -7,24 +7,24 @@ import creational.structure.Room
 
 class AbstractFactoryMazeGame {
 
-    // MazeAbstractFactory can be replaced with BombedMazeAbstractFactory or EnchantedMazeAbstractFactory
-    fun createMaze(mazeAbstractFactory: MazeAbstractFactory): Maze {
-        val maze: Maze = mazeAbstractFactory.makeMaze()
-        val room1: Room = mazeAbstractFactory.makeRoom(1)
-        val room2: Room = mazeAbstractFactory.makeRoom(2)
-        val door: Door =  mazeAbstractFactory.makeDoor(room1, room2)
+    // AbstractMazeFactory can be replaced with AbstractBombedMazeFactory or AbstractEnchantedMazeFactory
+    fun createMaze(abstractMazeFactory: AbstractMazeFactory): Maze {
+        val maze: Maze = abstractMazeFactory.makeMaze()
+        val room1: Room = abstractMazeFactory.makeRoom(1)
+        val room2: Room = abstractMazeFactory.makeRoom(2)
+        val door: Door =  abstractMazeFactory.makeDoor(room1, room2)
 
         maze.addRoom(room1)
         maze.addRoom(room2)
 
-        room1.setSide(Direction.NORTH,  mazeAbstractFactory.makeWall())
+        room1.setSide(Direction.NORTH,  abstractMazeFactory.makeWall())
         room1.setSide(Direction.EAST, door)
-        room1.setSide(Direction.SOUTH, mazeAbstractFactory.makeWall())
-        room1.setSide(Direction.WEST, mazeAbstractFactory.makeWall())
+        room1.setSide(Direction.SOUTH, abstractMazeFactory.makeWall())
+        room1.setSide(Direction.WEST, abstractMazeFactory.makeWall())
 
-        room2.setSide(Direction.NORTH, mazeAbstractFactory.makeWall())
-        room2.setSide(Direction.EAST, mazeAbstractFactory.makeWall())
-        room2.setSide(Direction.SOUTH, mazeAbstractFactory.makeWall())
+        room2.setSide(Direction.NORTH, abstractMazeFactory.makeWall())
+        room2.setSide(Direction.EAST, abstractMazeFactory.makeWall())
+        room2.setSide(Direction.SOUTH, abstractMazeFactory.makeWall())
         room2.setSide(Direction.WEST, door)
 
         return maze

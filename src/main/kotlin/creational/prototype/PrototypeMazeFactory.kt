@@ -9,7 +9,7 @@ import creational.structure.Maze
 import creational.structure.Room
 import creational.structure.Wall
 
-open class MazePrototypeFactory(maze: Maze, wall: Wall, room: Room, door: Door) {
+open class PrototypeMazeFactory(maze: Maze, wall: Wall, room: Room, door: Door) {
     private val prototypeMaze: PrototypeMaze = maze as PrototypeMaze
     private val prototypeWall: PrototypeWall = wall as PrototypeWall
     private val prototypeRoom: PrototypeRoom = room as PrototypeRoom

@@ -9,12 +9,12 @@ import creational.structure.Wall
 import creational.structure.bombed.BombedWall
 import creational.structure.bombed.RoomWithABomb
 
-class BombedMazePrototypeFactory(
+class PrototypeBombedMazeFactory(
     maze: Maze,
     wall: Wall,
     room: Room,
     door: Door
-) : MazePrototypeFactory(maze, wall, room, door) {
+) : PrototypeMazeFactory(maze, wall, room, door) {
     private val prototypeWall: PrototypeBombedWall = wall as PrototypeBombedWall
     private val prototypeRoom: PrototypeRoomWithABomb = room as PrototypeRoomWithABomb
     override fun makeWall(): BombedWall {
