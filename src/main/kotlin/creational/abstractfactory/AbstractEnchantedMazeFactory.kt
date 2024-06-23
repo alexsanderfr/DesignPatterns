@@ -6,7 +6,7 @@ import creational.structure.enchanted.DoorNeedingSpell
 import creational.structure.enchanted.EnchantedRoom
 import creational.structure.enchanted.Spell
 
-abstract class EnchantedMazeAbstractFactory : MazeAbstractFactory() {
+abstract class AbstractEnchantedMazeFactory : AbstractMazeFactory() {
     override fun makeRoom(number: Int): Room {
         return EnchantedRoom(number, castSpell())
     }

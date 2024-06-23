@@ -5,7 +5,7 @@ import creational.structure.Maze
 import creational.structure.Room
 import creational.structure.Wall
 
-abstract class MazeAbstractFactory {
+abstract class AbstractMazeFactory {
     abstract fun makeMaze(): Maze
     abstract fun makeWall(): Wall
     abstract fun makeRoom(number: Int): Room

@@ -1,6 +1,6 @@
 package creational.structure
 
-class Maze(private val rooms: MutableList<Room> = mutableListOf()) {
+open class Maze(private val rooms: MutableList<Room> = mutableListOf()) {
     fun addRoom(room: Room) {
         rooms.add(room)
     }

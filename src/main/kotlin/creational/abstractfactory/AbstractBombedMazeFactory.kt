@@ -5,7 +5,7 @@ import creational.structure.Wall
 import creational.structure.bombed.BombedWall
 import creational.structure.bombed.RoomWithABomb
 
-abstract class BombedMazeAbstractFactory : MazeAbstractFactory() {
+abstract class AbstractBombedMazeFactory : AbstractMazeFactory() {
     override fun makeWall(): Wall {
         return BombedWall()
     }
