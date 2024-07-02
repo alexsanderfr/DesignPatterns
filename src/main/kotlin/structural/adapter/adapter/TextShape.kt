@@ -1,13 +1,14 @@
 package structural.adapter.adapter
 
 import structural.adapter.Manipulator
-import structural.adapter.Point
+import structural.structure.Point
 import structural.adapter.Shape
 import structural.adapter.adaptee.TextManipulator
 import structural.adapter.adaptee.TextView
+import structural.structure.Coord
 
 class TextShape(private val textView: TextView) : Shape {
-    override fun boundingBox(): Pair<Point, Point> {
+    override fun boundingBox():Coord {
         val extent = textView.getExtent()
         val width = extent.x
         val height = extent.y
@@ -16,7 +17,7 @@ class TextShape(private val textView: TextView) : Shape {
         val left = origin.y
         val bottomLeft = Point(bottom, left)
         val topRight = Point(bottom+height, left+width)
-        return Pair(bottomLeft, topRight)
+        return Coord(bottomLeft, topRight)
     }
 
     override fun createManipulator(): Manipulator {

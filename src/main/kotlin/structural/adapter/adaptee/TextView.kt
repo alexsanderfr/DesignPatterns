@@ -1,6 +1,6 @@
 package structural.adapter.adaptee
 
-import structural.adapter.Point
+import structural.structure.Point
 
 interface TextView {
     fun getOrigin(): Point
