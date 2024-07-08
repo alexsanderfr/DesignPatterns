@@ -1,6 +1,5 @@
 package structural.facade
 
-import sun.jvm.hotspot.interpreter.BytecodeStream
 import java.io.InputStream
 
 class Compiler {
