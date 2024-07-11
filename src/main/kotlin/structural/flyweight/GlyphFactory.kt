@@ -7,7 +7,7 @@ class GlyphFactory(private var characters: MutableList<Character>) {
 
     init {
         characters = mutableListOf()
-        for (i in 0 until NCHARCODES) {
+        for (i in 0..<NCHARCODES) {
             val char = Char(0)
             characters.add(Character(char))
         }
